@@ -42,26 +42,15 @@ Only Moonraker (Klipper) printers are supported, with OctoEverywhere installed o
 
 ## Install
 
-1. Copy this folder to the device OctoEverywhere runs on and run the installer:
+1. On the device OctoEverywhere runs on:
 
    ```
-   ./installer.sh
+   git clone https://github.com/sterling5241/gadget-camera.git ~/gadget-camera
+   cd ~/gadget-camera
+   sh installer.sh
    ```
 
-   It finds OctoEverywhere in `~/octoeverywhere`, `/usr/data/octoeverywhere`, `/usr/share/octoeverywhere` or `/mnt/UDISK/octoeverywhere`. If yours is somewhere else, pass the path:
-
-   ```
-   ./installer.sh /path/to/octoeverywhere
-   ```
-
-   The installer copies the files in, turns the card on in every `octoeverywhere.conf` it finds and restarts OctoEverywhere.
-
-   To do it by hand instead, copy the files over your OctoEverywhere install keeping the same folders, add this to `octoeverywhere.conf` and restart OctoEverywhere:
-
-   ```
-   [gadget]
-   status_card_enabled = true
-   ```
+   If OctoEverywhere isn't in `~/octoeverywhere`, `/usr/data/octoeverywhere`, `/usr/share/octoeverywhere` or `/mnt/UDISK/octoeverywhere`, pass the path: `sh installer.sh /path/to/octoeverywhere`
 
 2. Add the card in Fluidd under **Settings > Cameras > Add camera**:
 
