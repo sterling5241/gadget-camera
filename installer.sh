@@ -1,7 +1,7 @@
 #!/bin/sh
 
 # Installs the Gadget status card into an existing OctoEverywhere install.
-# Usage: ./installer.sh [path to the octoeverywhere repo]
+# Usage: sh installer.sh [path to the octoeverywhere repo]
 
 SCRIPT_DIR=$(cd "$(dirname "$0")" && pwd)
 
@@ -16,7 +16,7 @@ if [ -z "$OE_DIR" ]; then
 fi
 
 if [ -z "$OE_DIR" ] || [ ! -f "$OE_DIR/moonraker_octoeverywhere/moonrakerhost.py" ]; then
-    echo "ERROR: OctoEverywhere was not found, pass the path to it, for example: ./installer.sh ~/octoeverywhere"
+    echo "ERROR: OctoEverywhere was not found, pass the path to it, for example: sh installer.sh ~/octoeverywhere"
     exit 1
 fi
 
